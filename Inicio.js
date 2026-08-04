@@ -1,6 +1,23 @@
 // =====================================================
 // CCDR Paraíso — interactividad
 // =====================================================
+function scrollToCard(el) {
+  if (!el) return;
+
+  const header = document.getElementById('siteHeader');
+  const headerHeight = header ? header.offsetHeight : 0;
+
+  const top =
+    el.getBoundingClientRect().top +
+    window.pageYOffset -
+    headerHeight -
+    20;
+
+  window.scrollTo({
+    top,
+    behavior: 'smooth'
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -180,10 +197,9 @@ botones.forEach((boton)=>{
 <p>${disciplina.contacto}</p>
 </div>
        `;
-       contenedor.scrollIntoView({
-           behavior:"smooth",
-           block:"start"
-       });
+        setTimeout(() => {
+        scrollToCard(contenedor);
+      }, 100);
 
        const cerrar = contenedor.querySelector(".disciplina-close");
        cerrar.addEventListener("click", ()=>{
@@ -256,7 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
 
-        contenedorInfoComunidad.scrollIntoView({ behavior: "smooth", block: "start" });
+                setTimeout(() => {
+          scrollToCard(contenedorInfoComunidad);
+        }, 100);
 
         contenedorInfoComunidad.querySelector('.comunidad-close').addEventListener('click', () => {
           contenedorInfoComunidad.innerHTML = '';
@@ -352,7 +370,10 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      contenedorAcercamiento.scrollIntoView({ behavior: "smooth", block: "start" });
+      
+            setTimeout(() => {
+        scrollToCard(contenedorAcercamiento);
+      }, 100);
 
       contenedorAcercamiento.querySelector('.acercamiento-close').addEventListener('click', () => {
         contenedorAcercamiento.innerHTML = '';
