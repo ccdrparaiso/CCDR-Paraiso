@@ -126,7 +126,7 @@ const informacionDisciplinas = {
    atletismo: {
        nombre: "🏃 Atletismo / paratletismo",
        entrenador: "Edgar Araya",
-       contacto: "8755-0667"
+       contacto: "7127-2362"
    },
    futsala: {
        nombre: "⚽ Futsala",
