@@ -1063,7 +1063,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
    padding:35px;
    box-shadow:0 12px 30px rgba(0,0,0,.12);
    border-left:8px solid #F6B21A;
-   animation:aparecer .4s;
+}
+.disciplina-card h3,
+.disciplina-card p{
+    opacity:0;
+    animation: aparecerInfo .45s forwards;
+}
+
+.disciplina-card h3:nth-of-type(1){animation-delay:.25s;}
+.disciplina-card p:nth-of-type(1){animation-delay:.35s;}
+.disciplina-card h3:nth-of-type(2){animation-delay:.45s;}
+.disciplina-card p:nth-of-type(2){animation-delay:.55s;}
+
+@keyframes aparecerInfo{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 .disciplina-card h2{
    color:#14488F;

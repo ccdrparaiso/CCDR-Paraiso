@@ -151,7 +151,7 @@ const informacionDisciplinas = {
        contacto: "8812-7220<br>8324-4744"
    },
    futbolf: {
-       nombre: "⚽ Fútbol",
+       nombre: "⚽️ Fútbol",
        entrenador: "Jhon Jairo Quiñones",
        contacto: "8976-2178"
    },
